@@ -45,6 +45,3 @@ export default async function handler(req, res) {
 export const config = {
   api: { bodyParser: false },
 };
-
-// superb-helped-zenith-fair
-// account id acct_1NucxrHq5XtcTa27
