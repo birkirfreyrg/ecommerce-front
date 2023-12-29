@@ -13,9 +13,12 @@ import styled from "styled-components";
 
 const ColWrapper = styled.div`
   display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
+  grid-template-columns: 1fr;
+  @media screen and (min-width: 768px) {
+    grid-template-columns: 0.8fr 1.2fr;
+  }
   gap: 40px;
-  margin-top: 40px;
+  margin: 40px 0;
 `;
 
 const PriceRow = styled.div`
@@ -44,7 +47,7 @@ export default function ProductPage({ product }) {
 
             <PriceRow>
               <div>
-                <Price> {product.price}kr</Price>
+                <Price> {product.price.toLocaleString("is-IS")}kr</Price>
               </div>
               <div>
                 <Button $primary onClick={() => addProduct(product._id)}>
